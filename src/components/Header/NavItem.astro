@@ -1,0 +1,54 @@
+---
+import Dropdown from "./Dropdown.astro";
+
+interface collapseItems {
+  href: string;
+  name: string;
+}
+
+interface Props {
+  url: string;
+  name: string;
+  title: string;
+  collapseMenu?: boolean;
+  dropdownItems?: collapseItems[];
+}
+
+const { url, name, title, collapseMenu, dropdownItems } = Astro.props;
+---
+
+{
+  collapseMenu ? (
+    <Dropdown dropdownItems={dropdownItems} name={name} url={url} title={title} />
+  ) : (
+    <a
+      id={url === "/" ? "home" : url.replace("/", "")}
+      href={url}
+      title={title}
+      data-astro-prefetch
+      class="rounded-lg text-base font-medium text-gray-500 outline-none ring-zinc-500 hover:text-blue-500 focus-visible:ring md:py-3 md:text-sm 2xl:text-base"
+    >
+      <span>{name}</span>
+    </a>
+  )
+}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let url = window.location.pathname;
+    let navId;
+
+    if (url === "/") {
+      navId = "home";
+    } else {
+      navId = url.replace("/", "");
+    }
+
+    let nav = document.getElementById(navId);
+
+    if (nav) {
+      nav.classList.remove("text-gray-500", "hover:text-gray-700");
+      nav.classList.add("text-blue-600", "dark:text-orange-300");
+    }
+  });
+</script>

@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import brandLogo from '../../../public/logo.webp'
+
+interface Props {
+    styles?: string;
+}
+
+let { styles } = Astro.props;
+---
+
+<Image
+  src={brandLogo}
+  alt={"Logo of the company"}
+  title="Brand logo"
+  draggable="false"
+  class:list={{
+    "h-auto w-24": !styles,
+    ...styles?.split(' ').reduce((acc, cls) => cls ? { ...acc, [cls]: true } : acc, {})
+  }}
+  loading="eager"
+  itemprop="image"
+/>
