@@ -15,18 +15,20 @@ interface Props {
 }
 
 const { url, name, title, collapseMenu, dropdownItems } = Astro.props;
+
+let globalStyles = 'rounded-lg text-base font-medium text-gray-500 outline-none ring-zinc-500 hover:text-[#395f7f] focus-visible:ring active:text-[#395f7f] py-2'
 ---
 
 {
   collapseMenu ? (
-    <Dropdown dropdownItems={dropdownItems} name={name} url={url} title={title} />
+    <Dropdown dropdownItems={dropdownItems} name={name} url={url} title={title} styles={globalStyles}/>
   ) : (
     <a
       id={url === "/" ? "home" : url.replace("/", "")}
       href={url}
       title={title}
       data-astro-prefetch
-      class="rounded-lg text-base font-medium text-gray-500 outline-none ring-zinc-500 hover:text-[#015699] focus-visible:ring md:py-3 active:text-[#015699]"
+      class={globalStyles}
     >
       <span>{name}</span>
     </a>
