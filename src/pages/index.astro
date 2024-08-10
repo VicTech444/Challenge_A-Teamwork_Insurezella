@@ -1,10 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import PrincipalCard from "../components/Body/PrincipalCard.astro";
-import PrincipalCardMobile from "../components/Body/PrincipalCardMobile.astro";
+import PrincipalCard from "../components/Body/tablet-desktop/PrincipalCard.astro";
+import PrincipalCardMobile from "../components/Body/mobile/PrincipalCardMobile.astro";
+import MobileHolder from "../components/MobileHolder.astro";
+import TabletDesktopHolder from "../components/TabletDesktopHolder.astro";
 ---
 
 <Layout title="A-Teamwork Challenge.">
-  <PrincipalCardMobile/>
-  <PrincipalCard />
+  <MobileHolder />
+  <TabletDesktopHolder />
 </Layout>
