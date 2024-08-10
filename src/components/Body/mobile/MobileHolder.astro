@@ -1,11 +1,14 @@
 ---
 import HeaderParagraph from "./HeaderParagraph.astro";
 import PrincipalCardMobile from "./PrincipalCardMobile.astro";
+import PolicySlider from "./PolicySlider.astro";
 
-let headerStyles = "text-2xl font-bold text-[#2a3143] text-right max-w-[240px] min-[400px]:text-3xl min-[400px]:max-w-[300px]";
+let headerStyles =
+  "text-2xl font-bold text-[#2a3143] text-right max-w-[240px] min-[400px]:text-3xl min-[400px]:max-w-[300px]";
 let highlightStyles = "text-[#4c76f5]";
 
-let paragraphStyles = "text-[#8c90a5] text-sm max-w-[440px] min-[450px]:text-base"
+let paragraphStyles =
+  "text-[#8c90a5] text-sm max-w-[440px] min-[450px]:text-base";
 ---
 
 <main class="mobile-layout">
@@ -16,6 +19,7 @@ let paragraphStyles = "text-[#8c90a5] text-sm max-w-[440px] min-[450px]:text-bas
       paragraph=`<p class="${paragraphStyles}">We're here to make understanding health insurance a breeze! Our friendly guide breaks down the ins and outs of insurance, helping you make informed choices with a smile. Say goodbye to confusion and hello to clarity</p>`
     />
   </div>
+  <PolicySlider />
 </main>
 
 <style>
