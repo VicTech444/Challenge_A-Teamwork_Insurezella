@@ -1,0 +1,71 @@
+---
+import BrandLogo from "./BrandLogo.astro";
+import NavItem from "./NavItem.astro";
+import { NavList } from "./NavList";
+import EmailMessage from "../../SVG/EmailMessage.astro";
+import PhoneCall from "../../SVG/PhoneCall.astro";
+import ArrowRight from "../../SVG/ArrowRight.astro";
+---
+
+<div class="desktop-header">
+  <div
+    class="flex text-white py-1 col-start-1 col-end-3 flex-wrap items-center bg-blue-500 px-6 justify-center gap-x-56 xl:gap-x-96 "
+  >
+    <label class="text-lg font-bold">Want to Connect with us?</label>
+    <div
+      class="flex gap-x-10 items-center font-medium flex-wrap gap-y-2 text-sm"
+    >
+      <label class="flex gap-x-[10px] items-center"
+        ><EmailMessage /><span class="w-fit"
+          >Mail us: support@insuzerella.com</span
+        ></label
+      >
+      <label class="flex gap-x-[10px] items-center"
+        ><PhoneCall />
+        <span class="w-fit">Call us: (877) 277 0774</span></label
+      >
+    </div>
+  </div>
+  <div class="grid grid-cols-3 gap-6 px-6 py-3 items-center xl:px-36">
+    <div class="flex items-center">
+      <a class="text-xl font-semibold w-max" href="/">
+        <BrandLogo styles="h-24 w-24 object-cover rounded-lg" />
+      </a>
+    </div>
+    <nav
+      id="navbar-collapse-with-animation"
+      class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block bg-white rounded-md p-3 items-center"
+    >
+      <div
+        class="flex items-center gap-y-4 gap-x-0 justify-center md:gap-y-0 md:gap-x-7"
+      >
+        {
+          NavList.map((nav) => (
+            <NavItem
+              url={nav.path}
+              name={nav.name}
+              title={nav.title}
+              collapseMenu={nav.collapseMenu}
+              dropdownItems={nav.collapseItems}
+            />
+          ))
+        }
+      </div>
+    </nav>
+    <div class="flex items-center justify-end">
+      <button
+        class="bg-blue-700 text-white w-max px-5 py-3 rounded-full flex gap-x-2 items-center font-bold"
+      >
+        Call us Now <ArrowRight />
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 1024px) {
+    .desktop-header {
+      display: none;
+    }
+  }
+</style>

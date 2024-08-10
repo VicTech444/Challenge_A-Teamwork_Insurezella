@@ -8,8 +8,10 @@ import EmailMessage from "../../SVG/EmailMessage.astro";
 import PhoneCall from "../../SVG/PhoneCall.astro";
 ---
 
-<header class="">
-  <div class="flex bg-blue-500 px-6 py-3 gap-6 flex-wrap min-[400px]:flex-nowrap">
+<div class="mobile-header">
+  <div
+    class="flex bg-blue-500 px-6 py-3 gap-6 flex-wrap min-[400px]:flex-nowrap"
+  >
     <div class="flex items-center">
       <a class="text-xl font-semibold w-max" href="/">
         <BrandLogo styles="h-24 w-24 object-cover" />
@@ -27,9 +29,11 @@ import PhoneCall from "../../SVG/PhoneCall.astro";
       </button>
     </div>
     <div
-      class="flex text-white py-1  flex-wrap items-center gap-y-3 min-[600px]:flex-nowrap justify-between w-full min-[600px]:gap-x-4"
+      class="flex text-white py-1 flex-wrap items-center gap-y-3 min-[600px]:flex-nowrap justify-between w-full min-[600px]:gap-x-4"
     >
-      <label class="text-base font-bold min-[830px]:text-xl">Want to Connect with us?</label>
+      <label class="text-base font-bold min-[830px]:text-xl"
+        >Want to Connect with us?</label
+      >
       <div
         class="flex justify-between items-center font-medium flex-wrap gap-y-2 text-xs gap-x-8 min-[830px]:text-base"
       >
@@ -46,23 +50,31 @@ import PhoneCall from "../../SVG/PhoneCall.astro";
     </div>
   </div>
   <nav
-  id="navbar-collapse-with-animation-two"
-  class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow bg-white col-end-3 col-start-1 rounded-md py-3 px-6"
->
-  <div
-    class="flex flex-col gap-y-4 gap-x-0 justify-center md:gap-y-0 md:gap-x-7"
+    id="navbar-collapse-with-animation-two"
+    class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow bg-white col-end-3 col-start-1 rounded-md py-3 px-6"
   >
-    {
-      NavList.map((nav) => (
-        <NavItem
-          url={nav.path}
-          name={nav.name}
-          title={nav.title}
-          collapseMenu={nav.collapseMenu}
-          dropdownItems={nav.collapseItems}
-        />
-      ))
+    <div
+      class="flex flex-col gap-y-4 gap-x-0 justify-center md:gap-y-0 md:gap-x-7"
+    >
+      {
+        NavList.map((nav) => (
+          <NavItem
+            url={nav.path}
+            name={nav.name}
+            title={nav.title}
+            collapseMenu={nav.collapseMenu}
+            dropdownItems={nav.collapseItems}
+          />
+        ))
+      }
+    </div>
+  </nav>
+</div>
+
+<style>
+  @media (min-width: 1024px) {
+    .mobile-header {
+      display: none;
     }
-  </div>
-</nav>
-</header>
+  }
+</style>

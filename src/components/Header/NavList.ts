@@ -6,28 +6,28 @@ export const NavList = [
   },
   {
     name: "Find Insurance",
-    path: "/",
+    path: "/find-insurance/",
     title: 'Find Insurance link',
     collapseMenu: true,
     collapseItems: [
       {
         name: "Collapse item one",
-        href: "/",
+        href: "/collapse-one/",
       },
       {
         name: "Collapse item two",
-        href: "/",
+        href: "/collapse-two/",
       }
     ]
   },
   {
     name: "Learn",
-    path: "/",
+    path: "/learn/",
     title: 'Learn link'
   },
   {
     name: "About",
-    path: "/",
+    path: "/about/",
     title: 'About link'
   }
 ];
