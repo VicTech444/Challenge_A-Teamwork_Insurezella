@@ -1,16 +1,18 @@
 ---
 interface Props {
-  text: string;
+  header: string;
   paragraph: string;
 }
-let { text, paragraph } = Astro.props;
+let { header, paragraph } = Astro.props;
 ---
 
-<section class="grid grid-cols-1 grid-rows-2">
-  <div class="">
-    {text}
+<section
+  class="flex flex-col gap-y-8 py-8 min-[400px]:items-center min:[500px]:gap-y-0 min-[450px]:grid min-[450px]:grid-cols-1 min-[450px]:grid-rows-2"
+>
+  <div class="flex text-[#2a3143] pr-[18%] min-[400px]:pr-[18%] min-[500px]:justify-center ">
+    <Fragment set:html={header} />
   </div>
-  <div class="">
-    {paragraph}
+  <div class="flex pl-[20%] min-[500px]:justify-center">
+    <Fragment set:html={paragraph}/>
   </div>
 </section>
