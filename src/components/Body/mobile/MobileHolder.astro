@@ -1,5 +1,5 @@
 ---
-import HeaderParagraph from "./HeaderParagraph.astro";
+import CardTwo from "./CardTwo.astro";
 import PrincipalCardMobile from "./PrincipalCardMobile.astro";
 import PolicySlider from "./PolicySlider.astro";
 import { PlansCardList } from "../../../helpers/PlansCardList";
@@ -13,19 +13,20 @@ let paragraphStyles = "text-[#8c90a5] text-sm max-w-[450px] min-[450px]:text-bas
 <main class="mobile-layout">
   <PrincipalCardMobile />
   <div class="px-4 min-[500px]:px-8">
-    <HeaderParagraph
+    <CardTwo
       header=`<h2 class="${headerStyles}">Navigating <span class="${highlightStyles}">Health Insurance</span> Made Easy</h2>`
       paragraph=`<p class="${paragraphStyles}">We're here to make understanding health insurance a breeze! Our friendly guide breaks down the ins and outs of insurance, helping you make informed choices with a smile. Say goodbye to confusion and hello to clarity</p>`
     />
   </div>
   <PolicySlider />
   <div class="px-4 min-[500px]:px-8">
-    <HeaderParagraph
+    <CardTwo
       header=`<h2 class="${headerStyles}">Affordable plans to <span class="${highlightStyles}">Custom fit You</span></h2>`
       paragraph=`<p class="${paragraphStyles}">Comprehensive guides, expert advice, and simple tips to save on healthcare costs without sacrificing quality. Trust insurezella to help you reduce your expenses confidently</p>`
       renderCards={PlansCardList}
       />
   </div>
+  
 </main>
 
 <style>
