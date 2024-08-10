@@ -2,6 +2,7 @@
 import CardTwo from "./CardTwo.astro";
 import PrincipalCardMobile from "./PrincipalCardMobile.astro";
 import PolicySlider from "./PolicySlider.astro";
+import TimelineCard from './TimelineCard.astro'
 import { PlansCardList } from "../../../helpers/PlansCardList";
 
 let headerStyles = "text-2xl font-bold text-[#2a3143] text-right max-w-[240px] min-[400px]:text-3xl min-[400px]:max-w-[300px]";
@@ -26,7 +27,7 @@ let paragraphStyles = "text-[#8c90a5] text-sm max-w-[450px] min-[450px]:text-bas
       renderCards={PlansCardList}
       />
   </div>
-  
+  <TimelineCard />
 </main>
 
 <style>
