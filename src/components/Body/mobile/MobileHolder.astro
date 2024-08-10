@@ -3,12 +3,10 @@ import HeaderParagraph from "./HeaderParagraph.astro";
 import PrincipalCardMobile from "./PrincipalCardMobile.astro";
 import PolicySlider from "./PolicySlider.astro";
 
-let headerStyles =
-  "text-2xl font-bold text-[#2a3143] text-right max-w-[240px] min-[400px]:text-3xl min-[400px]:max-w-[300px]";
+let headerStyles = "text-2xl font-bold text-[#2a3143] text-right max-w-[240px] min-[400px]:text-3xl min-[400px]:max-w-[300px]";
 let highlightStyles = "text-[#4c76f5]";
 
-let paragraphStyles =
-  "text-[#8c90a5] text-sm max-w-[440px] min-[450px]:text-base";
+let paragraphStyles = "text-[#8c90a5] text-sm max-w-[450px] min-[450px]:text-base";
 ---
 
 <main class="mobile-layout">
@@ -20,6 +18,12 @@ let paragraphStyles =
     />
   </div>
   <PolicySlider />
+  <div class="px-4 min-[500px]:px-8">
+    <HeaderParagraph
+      header=`<h2 class="${headerStyles}">Affordable plans to <span class="${highlightStyles}">Custom fit You</span></h2>`
+      paragraph=`<p class="${paragraphStyles}">Comprehensive guides, expert advice, and simple tips to save on healthcare costs without sacrificing quality. Trust insurezella to help you reduce your expenses confidently</p>`
+    />
+  </div>
 </main>
 
 <style>

@@ -1,15 +1,15 @@
 ---
 interface Props {
-  header: string;
-  paragraph: string;
+  header?: string;
+  paragraph?: string;
 }
 let { header, paragraph } = Astro.props;
 ---
 
 <section
-  class="flex flex-col max-[450px]:gap-y-8 py-12 min-[400px]:items-center min:[500px]:gap-y-0 min-[450px]:grid min-[450px]:grid-cols-1 min-[450px]:grid-rows-2"
+  class="flex flex-col max-[450px]:gap-y-8 py-12 min-[400px]:items-center gap-y-6"
 >
-  <div class="flex text-[#2a3143] pr-[18%] min-[490px]:pr-[18%] min-[500px]:justify-center ">
+  <div class="flex text-[#2a3143] pr-[18%] min-[490px]:pr-[18%] min-[500px]:justify-center">
     <Fragment set:html={header} />
   </div>
   <div class="flex pl-[20%] min-[500px]:justify-center">
