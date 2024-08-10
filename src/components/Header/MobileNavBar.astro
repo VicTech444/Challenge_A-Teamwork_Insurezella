@@ -10,65 +10,45 @@ import PhoneCall from "../../SVG/PhoneCall.astro";
 
 <div class="mobile-header">
   <div
-    class="flex bg-blue-500 px-6 py-3 gap-6 flex-wrap min-[400px]:flex-nowrap"
-  >
-    <div class="flex items-center">
-      <a class="text-xl font-semibold w-max" href="/">
-        <BrandLogo styles="h-24 w-24 object-cover" />
-      </a>
-    </div>
-    <div class="lg:hidden flex justify-end items-center">
-      <button
-        type="button"
-        class="hs-collapse-toggle size-8 justify-center items-center text-sm font-semibold rounded-full disabled:opacity-50 disabled:pointer-events-none text-white flex"
-        data-hs-collapse="#navbar-collapse-with-animation-two"
-        aria-controls="navbar-collapse-with-animation"
-      >
-        <OpenMenuMobile />
-        <CloseMenuMobile />
-      </button>
-    </div>
-    <div
-      class="flex text-white py-1 flex-wrap items-center gap-y-3 min-[600px]:flex-nowrap justify-between w-full min-[600px]:gap-x-4"
+  class="relative flex bg-blue-500 px-6 py-3 gap-x-6 flex-wrap min-[400px]:flex-nowrap gap-y-12"
+>
+  <div class="flex items-center relative h-24 w-24 -mt-8">
+    <a class="text-xl font-semibold w-24 h-24 " href="/">
+      <BrandLogo styles="h-24 w-24 object-cover absolute top-8" />
+    </a>
+  </div>
+  <div class="lg:hidden flex justify-end items-center">
+    <button
+      type="button"
+      class="hs-collapse-toggle size-8 justify-center items-center text-sm font-semibold rounded-full disabled:opacity-50 disabled:pointer-events-none text-white flex"
+      data-hs-collapse="#navbar-collapse-with-animation-two"
+      aria-controls="navbar-collapse-with-animation"
     >
-      <label class="text-base font-bold min-[830px]:text-xl"
-        >Want to Connect with us?</label
+      <OpenMenuMobile />
+      <CloseMenuMobile />
+    </button>
+  </div>
+  <div
+    class="flex text-white py-1 flex-wrap items-center gap-y-3 min-[600px]:flex-nowrap justify-between w-full min-[600px]:gap-x-4"
+  >
+    <label class="text-base font-bold min-[830px]:text-xl"
+      >Want to Connect with us?</label
+    >
+    <div
+      class="flex justify-between items-center font-medium flex-wrap gap-y-2 text-xs gap-x-8 min-[830px]:text-base"
+    >
+      <label class="flex gap-x-[10px] items-center"
+        ><EmailMessage /><span class="w-fit"
+          >Mail us: support@insuzerella.com</span
+        ></label
       >
-      <div
-        class="flex justify-between items-center font-medium flex-wrap gap-y-2 text-xs gap-x-8 min-[830px]:text-base"
+      <label class="flex gap-x-[10px] items-center"
+        ><PhoneCall />
+        <span class="w-fit">Call us: (877) 277 0774</span></label
       >
-        <label class="flex gap-x-[10px] items-center"
-          ><EmailMessage /><span class="w-fit"
-            >Mail us: support@insuzerella.com</span
-          ></label
-        >
-        <label class="flex gap-x-[10px] items-center"
-          ><PhoneCall />
-          <span class="w-fit">Call us: (877) 277 0774</span></label
-        >
-      </div>
     </div>
   </div>
-  <nav
-    id="navbar-collapse-with-animation-two"
-    class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow bg-white col-end-3 col-start-1 rounded-md py-3 px-6"
-  >
-    <div
-      class="flex flex-col gap-y-4 gap-x-0 justify-center md:gap-y-0 md:gap-x-7"
-    >
-      {
-        NavList.map((nav) => (
-          <NavItem
-            url={nav.path}
-            name={nav.name}
-            title={nav.title}
-            collapseMenu={nav.collapseMenu}
-            dropdownItems={nav.collapseItems}
-          />
-        ))
-      }
-    </div>
-  </nav>
+</div>
 </div>
 
 <style>
