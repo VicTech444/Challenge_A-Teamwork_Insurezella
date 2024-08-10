@@ -1,18 +1,46 @@
 ---
+import PlansCard from './PlansCard.astro';
+
+interface PlanCardsProps {
+  image: string;
+  date: string;
+  dateStyles: string;
+  title: string;
+  description: string;
+  actionCall?: string;
+}
 interface Props {
   header?: string;
   paragraph?: string;
+  renderCards?: PlanCardsProps[]
 }
-let { header, paragraph } = Astro.props;
+let { header, paragraph, renderCards } = Astro.props;
 ---
 
 <section
-  class="flex flex-col max-[450px]:gap-y-8 py-12 min-[400px]:items-center gap-y-6"
+  class="flex flex-col max-[450px]:gap-y-8 py-12 min-[400px]:items-center gap-y-8"
 >
-  <div class="flex text-[#2a3143] pr-[18%] min-[490px]:pr-[18%] min-[500px]:justify-center">
+  <div class="flex text-[#2a3143] pr-[18%] min-[490px]:pr-[18%] min-[500px]:justify-center mb-3">
     <Fragment set:html={header} />
   </div>
   <div class="flex pl-[20%] min-[500px]:justify-center">
     <Fragment set:html={paragraph}/>
   </div>
+  <div class="grid-layout gap-5">
+   {
+    renderCards?.map(plan => {
+      return (<PlansCard {...plan}/>)
+    })
+   }
+  </div>
 </section>
+
+<style>
+  .grid-layout{
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(300px, 350px)
+    );
+  }
+</style>

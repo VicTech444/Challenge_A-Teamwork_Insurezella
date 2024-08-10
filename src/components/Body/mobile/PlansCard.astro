@@ -1,0 +1,38 @@
+---
+let {
+  image,
+  date,
+  dateStyles,
+  title,
+  description,
+  actionCall = "GET A QUOTE",
+} = Astro.props;
+---
+
+<div
+  class="flex flex-col bg-white "
+>
+  <img class="w-full h-auto" src=`${image}` alt="Card Image" />
+  <div class="p-4 md:p-5 flex flex-col gap-y-2">
+    <div class="flex gap-x-6 relative">
+      <div class="w-12">
+        <div
+          class=`absolute text-white font-bold rounded-md max-w-12 text-center py-4 px-2 -mt-8 z-10 ${dateStyles}`
+        >
+          {date}
+        </div>
+      </div>
+      <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+        {title}
+      </h3>
+    </div>
+    <p class="mt-1 text-[#9598ab] mb-2">
+      {description}
+    </p>
+    <p
+      class="text-[#4e78f4] font-bold"
+    >
+      {actionCall}
+    </p>
+  </div>
+</div>
