@@ -1,11 +1,11 @@
 ---
 import BrandLogo from "./BrandLogo.astro";
-import NavItem from "./NavItem.astro";
-import { NavList } from "./NavList";
 import CloseMenuMobile from "../../SVG/CloseMenuMobile.astro";
 import OpenMenuMobile from "../../SVG/OpenMenuMobile.astro";
 import EmailMessage from "../../SVG/EmailMessage.astro";
 import PhoneCall from "../../SVG/PhoneCall.astro";
+import NavItem from "./NavItem.astro";
+import { NavList } from "./NavList";
 ---
 
 <div class="mobile-header">
@@ -49,6 +49,26 @@ import PhoneCall from "../../SVG/PhoneCall.astro";
     </div>
   </div>
 </div>
+<nav
+      id="navbar-collapse-with-animation-two"
+      class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow bg-white rounded-md p-3 items-center"
+    >
+      <div
+        class="flex items-center gap-y-4 gap-x-0 justify-center md:gap-y-0 md:gap-x-7"
+      >
+        {
+          NavList.map((nav) => (
+            <NavItem
+              url={nav.path}
+              name={nav.name}
+              title={nav.title}
+              collapseMenu={nav.collapseMenu}
+              dropdownItems={nav.collapseItems}
+            />
+          ))
+        }
+      </div>
+    </nav>
 </div>
 
 <style>
