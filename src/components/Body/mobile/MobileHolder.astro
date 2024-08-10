@@ -2,32 +2,43 @@
 import CardTwo from "./CardTwo.astro";
 import PrincipalCardMobile from "./PrincipalCardMobile.astro";
 import PolicySlider from "./PolicySlider.astro";
-import TimelineCard from './TimelineCard.astro'
+import TimelineCard from "./TimelineCard.astro";
+import ReviewsCard from "./ReviewsCard.astro";
 import { PlansCardList } from "../../../helpers/PlansCardList";
 
-let headerStyles = "text-2xl font-bold text-[#2a3143] text-right max-w-[240px] min-[400px]:text-3xl min-[400px]:max-w-[300px]";
-let highlightStyles = "text-[#4c76f5]";
-
-let paragraphStyles = "text-[#8c90a5] text-sm max-w-[450px] min-[450px]:text-base";
+let cardTwoHeader =
+  "text-2xl font-bold text-[#2a3143] text-right max-w-[240px] min-[400px]:text-3xl min-[400px]:max-w-[300px]";
+let cardTwoHighlight = "text-[#4c76f5]";
+let cardTwoParagraph =
+  "text-[#8c90a5] text-sm max-w-[450px] min-[450px]:text-base";
+let reviewsCardHeader = "text-center text-2xl font-bold mb-3";
+let reviewsCardHighlight = "text-[#4e78f4]";
+let reviewsCardParagraph = "text-[#5e5f5e] text-center max-w-[540px]";
 ---
 
 <main class="mobile-layout">
   <PrincipalCardMobile />
   <div class="px-4 min-[500px]:px-8">
     <CardTwo
-      header=`<h2 class="${headerStyles}">Navigating <span class="${highlightStyles}">Health Insurance</span> Made Easy</h2>`
-      paragraph=`<p class="${paragraphStyles}">We're here to make understanding health insurance a breeze! Our friendly guide breaks down the ins and outs of insurance, helping you make informed choices with a smile. Say goodbye to confusion and hello to clarity</p>`
+      header=`<h2 class="${cardTwoHeader}">Navigating <span class="${cardTwoHighlight}">Health Insurance</span> Made Easy</h2>`
+      paragraph=`<p class="${cardTwoParagraph}">We're here to make understanding health insurance a breeze! Our friendly guide breaks down the ins and outs of insurance, helping you make informed choices with a smile. Say goodbye to confusion and hello to clarity</p>`
     />
   </div>
   <PolicySlider />
   <div class="px-4 min-[500px]:px-8">
     <CardTwo
-      header=`<h2 class="${headerStyles}">Affordable plans to <span class="${highlightStyles}">Custom fit You</span></h2>`
-      paragraph=`<p class="${paragraphStyles}">Comprehensive guides, expert advice, and simple tips to save on healthcare costs without sacrificing quality. Trust insurezella to help you reduce your expenses confidently</p>`
+      header=`<h2 class="${cardTwoHeader}">Affordable plans to <span class="${cardTwoHighlight}">Custom fit You</span></h2>`
+      paragraph=`<p class="${cardTwoParagraph}">Comprehensive guides, expert advice, and simple tips to save on healthcare costs without sacrificing quality. Trust insurezella to help you reduce your expenses confidently</p>`
       renderCards={PlansCardList}
-      />
+    />
   </div>
   <TimelineCard />
+  <div class="px-4 min-[500px]:px-8">
+    <ReviewsCard
+      header=`<h1 class="${reviewsCardHeader}">Our clients <span class="${reviewsCardHighlight}">reviews</span></h1>`
+      paragraph=`<p class="${reviewsCardParagraph}">Condimentum rutrum placerat egestas condimentum mi eros. Eleifend cras quirntum Feugiat elit placerat. Diam tempor malesuada.</p>`
+    />
+  </div>
 </main>
 
 <style>
