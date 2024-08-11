@@ -1,5 +1,5 @@
 ---
-import CardThreeItem from "./CardThreeItem.astro";
+import SectionThreeItem from "./SectionThreeItem.astro";
 import healthInsurance from "../../../../public/health-insurance-icon.webp";
 import Medicare from '../../../../public/medicare-icon.webp'
 import LifeInsurance from '../../../../public/life-insurance-icon.webp';
@@ -54,7 +54,7 @@ let {paddingY} = Astro.props;
     <div class="grid grid-cols-2 grid-rows-3 gap-y-10 gap-x-14 lg:grid-cols-3 lg:grid-rows-2">
         {
             ListItems.map(itemInfo => {
-                return <CardThreeItem {...itemInfo}/>
+                return <SectionThreeItem {...itemInfo}/>
             })
         }
     </div>

@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
-import { Fragment } from "react/jsx-runtime";
 import CarrouselItem from "./CardFourCarrouselItem";
 
 interface Props {
