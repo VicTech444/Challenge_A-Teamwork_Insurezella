@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
-import { PlansListDesktop } from "../../../../helpers/PlansListDesktop";
+import { PlansListDesktop } from "../../../../helpers/tablet-desktop/PlansDesktopSectionOne";
 
 export default function SectionTwoCarrousel() {
   return (
