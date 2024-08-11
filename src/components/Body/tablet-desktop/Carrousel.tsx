@@ -8,7 +8,7 @@ import { PlansListDesktop } from "../../../helpers/PlansListDesktop";
 
 export default function Carousel() {
   return (
-    <div className="w-full">
+    <section className="w-full">
       <Swiper
         spaceBetween={20}
         slidesPerView={2}
@@ -46,6 +46,6 @@ export default function Carousel() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 }

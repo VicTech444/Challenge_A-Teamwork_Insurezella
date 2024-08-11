@@ -48,7 +48,7 @@ export default function CardFourCarrousel() {
 
   return (
     <>
-      <div className="w-full lg:hidden">
+      <section className="w-full lg:hidden">
         <Swiper
           spaceBetween={0}
           slidesPerView={2}
@@ -66,16 +66,16 @@ export default function CardFourCarrousel() {
         >
           {ItemList.map((slide, index) => (
             <SwiperSlide key={index}>
-              <CarrouselItem {...slide} index={index}/>
+              <CarrouselItem {...slide} index={index} />
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
-      <div className="hidden grid-cols-2 grid-rows-2 lg:grid">
+      </section>
+      <section className="hidden grid-cols-2 grid-rows-2 lg:grid">
         {ItemList.map((slide, index) => (
-         <CarrouselItem {...slide} index={index}/>
+          <CarrouselItem {...slide} index={index} />
         ))}
-      </div>
+      </section>
     </>
   );
 }
