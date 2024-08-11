@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+import commitedHelp from "../../../../public/committed-help.webp";
+import addonOne from "../../../../public/save-money.webp";
+import addonTwo from "../../../../public/licensed-agents.webp";
+
+interface Props {
+  addons?: boolean;
+}
+
+let { addons } = Astro.props;
+---
+
+<div class="grid grid-cols-5 grid-rows-2 gap-y-12 px-16">
+  <div class="row-start-1 col-start-1 col-end-4">
+    <Image
+      src={commitedHelp}
+      alt={"Logo of the company"}
+      title="Brand logo"
+      draggable="false"
+      class="h-auto w-full"
+      loading="eager"
+      itemprop="image"
+    />
+  </div>
+  <div class="row-start-2 col-start-3 col-end-6 flex flex-col gap-y-12">
+    <h1 class="text-[#2a3142] font-bold text-3xl max-w-[330px]">
+      Committed to help you find the right plan
+    </h1>
+    <p class="text-[#8f95a7]">
+      Insurance is an important financial tool that can help you protect
+      yourself and your loved ones from financial losses in the event of an
+      unexpected event. It is important to consider your individual needs and
+      circumstances when choosing the right insurance coverage for you and your
+      family.
+    </p>
+    <div>
+      <button
+        class="py-2 px-12 bg-[#0356fe] text-center text-white rounded-full"
+        >ABOUT INSUREZELLA</button
+      >
+    </div>
+    {
+      addons && (
+        <div class="flex gap-x-6 -mt-6">
+          <div class="flex gap-x-1 items-center">
+            <Image
+              src={addonOne}
+              alt={"Sample alt image"}
+              title="Sample image"
+              draggable="false"
+              class:list="h-auto w-24"
+              loading="lazy"
+            />
+            <label class="block text-[#110a14] font-bold -mt-1 max-w-[120px]">Save Money Compare Plans</label>
+          </div>
+          <div class="flex gap-x-1 items-center">
+            <Image
+              src={addonTwo}
+              alt={"Sample alt image"}
+              title="Sample image"
+              draggable="false"
+              class:list="h-auto w-24"
+              loading="lazy"
+            />
+            <label class="block text-[#110a14] font-bold -mt-1 max-w-[120px]">Licensed Agents</label>
+          </div>
+        </div>
+      )
+    }
+  </div>
+</div>
