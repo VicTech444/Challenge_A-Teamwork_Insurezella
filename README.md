@@ -1,54 +1,57 @@
-# Astro Starter Kit: Basics
+# Insurezella
 
-```sh
-npm create astro@latest -- --template basics
-```
+**Insurezella** es una aplicación web diseñada para ofrecer una interfaz moderna y amigable que facilita la exploración de opciones de seguros. Este proyecto ha sido desarrollado utilizando **Astro** como framework web, junto con **HTML**, **CSS** (a través de **Tailwind CSS**), y **Typescript** (superset de **Javascript**). También se han incorporado herramientas adicionales como **Swiper.js** para la creación de carouseles y la manipulación avanzada del diseño.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Tecnologías Utilizadas
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Astro** (v1.0+): Framework web principal utilizado para construir la aplicación.
+- **Tailwind CSS** (v3.0+): Utilizado para el diseño responsive y el estilizado del proyecto.
+- **JavaScript**: Lenguaje de programación para añadir interactividad y lógica en el frontend.
+- **Swiper.js** (v8.0+): Biblioteca usada para implementar un carrusel de dos slides.
+- **Preline**: Utilizado para componentes adicionales de UI.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Características del Proyecto
 
-## 🚀 Project Structure
+- **Diseño Responsive**: La aplicación está diseñada para funcionar perfectamente en dispositivos de diferentes tamaños de pantalla.
+- **Carouseles**: Implementados mediante **Swiper.js** para ofrecer una experiencia de usuario interactiva.
+- **Integración de Imágenes**: Soporte para imágenes de fondo y elementos visuales ajustados con Tailwind CSS.
+- **Accesibilidad**: Se ha prestado atención a la estructura semántica del HTML para garantizar que el contenido sea accesible.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Estructura del Proyecto
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+El proyecto sigue una estructura organizada:
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- **/src**: Contiene los archivos fuente, incluyendo componentes, páginas, y estilos personalizados.
+- **/public**: Archivos estáticos como imágenes y fuentes.
+- **/components**: Componentes reutilizables que son parte fundamental de la estructura de la UI.
+- **/layouts**: Plantillas para la estructura de páginas.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Instalación y Ejecución
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Requisitos Previos
 
-## 🧞 Commands
+Asegúrate de tener instalado **Node.js** (v14 o superior) y **npm** (v6 o superior) en tu máquina.
 
-All commands are run from the root of the project, from a terminal:
+### Instrucciones
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1. Clona este repositorio en tu máquina local:
+    ```bash
+    git clone https://github.com/VicTech444/Challenge_A-Teamwork_Insurezella.git
+    ```
 
-## 👀 Want to learn more?
+2. Navega al directorio del proyecto:
+    ```bash
+    cd insurezella
+    ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+3. Instala las dependencias necesarias:
+    ```bash
+    npm install
+    ```
+
+4. Inicia el servidor de desarrollo:
+    ```bash
+    npm run dev
+    ```
+
+5. Accede a la aplicación en tu navegador en `http://localhost:4321`.
