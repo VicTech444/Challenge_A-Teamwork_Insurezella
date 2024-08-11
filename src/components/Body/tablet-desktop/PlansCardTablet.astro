@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  href: ImageMetadata;
+  title: string;
+  styles?: string;
+}
+
+let { href, styles, title } = Astro.props;
+---
+
+
+  <div
+    class="flex flex-col bg-white custom-shadow rounded-md"
+  >
+    <div class="px-4 py-12 flex flex-col items-center gap-y-2 ">
+      <Image
+        src={href}
+        alt={"Logo of the image"}
+        title="Sample Image"
+        draggable="false"
+        class:list={{
+          "h-auto w-16 mx-auto": !styles,
+          ...styles
+            ?.split(" ")
+            .reduce((acc, cls) => (cls ? { ...acc, [cls]: true } : acc), {}),
+        }}
+        loading="eager"
+        itemprop="image"
+      />
+
+      <p class="mt-2 text-[#2b2b47] text-center max-w-[100px] font-bold text-lg">
+        {title}
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+    .custom-shadow {
+        box-shadow: 0 6px 15px 2px #bdcdfc;
+    }
+</style>
