@@ -1,0 +1,59 @@
+---
+import CardThreeItem from "./CardThreeItem.astro";
+import healthInsurance from "../../../../public/health-insurance-icon.webp";
+import Medicare from '../../../../public/medicare-icon.webp'
+import LifeInsurance from '../../../../public/life-insurance-icon.webp';
+import MedicareAdvantage from '../../../../public/medicare-advantage-icon.webp';
+import ACA from '../../../../public/obamacare-icon.webp';
+import ShortTerm from '../../../../public/short-term-icon.webp'
+
+const ListItems = [
+  {
+    imageSrc: healthInsurance,
+    header: "Health Insurance",
+    description:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy",
+  },
+  {
+    imageSrc: Medicare,
+    header: "MedicareSupplement",
+    description:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy",
+  },
+  {
+    imageSrc: LifeInsurance,
+    header: "LifeInsurance",
+    description:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy",
+  },
+  {
+    imageSrc: MedicareAdvantage,
+    header: "Medicare Advantage",
+    description:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy",
+  },
+  {
+    imageSrc: ACA,
+    header: "ACA / Obamacare",
+    description:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy",
+  },
+  {
+    imageSrc: ShortTerm,
+    header: "Short-Term Medical",
+    description:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy",
+  },
+];
+---
+
+<section class="py-8 bg-[#edf4ff] flex items-center flex-col gap-y-28 ">
+    <h2 class="text-3xl font-bold">Pick the insurance that suits your needs.</h2>
+    <div class="grid grid-cols-2 grid-rows-3 gap-y-10 gap-x-14">
+        {
+            ListItems.map(itemInfo => {
+                return <CardThreeItem {...itemInfo}/>
+            })
+        }
+    </div>
+</section>
