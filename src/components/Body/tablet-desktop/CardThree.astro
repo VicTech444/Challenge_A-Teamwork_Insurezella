@@ -45,9 +45,11 @@ const ListItems = [
       "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy",
   },
 ];
+
+let {paddingY} = Astro.props;
 ---
 
-<section class="py-8 bg-[#edf4ff] flex items-center flex-col gap-y-28 ">
+<section class=`bg-[#edf4ff] flex items-center flex-col gap-y-28 ${paddingY}`>
     <h2 class="text-3xl font-bold">Pick the insurance that suits your needs.</h2>
     <div class="grid grid-cols-2 grid-rows-3 gap-y-10 gap-x-14 lg:grid-cols-3 lg:grid-rows-2">
         {

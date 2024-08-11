@@ -6,12 +6,14 @@ import CardTwo from "./CardTwo.astro";
 import CardFour from "./CardFour.astro";
 import commitedHelp from "../../../../public/committed-help.webp";
 import protecting from '../../../../public/protecting.webp';
+
+const globalPaddingY = 'py-12'
 ---
 
 <main class="tablet-desktop-layout ">
     <PrincipalCard />
     <section class="flex flex-col">
-        <div class="py-8 px-4 lg:px-8 gap-y-10">
+        <div class=`px-4 lg:px-8 gap-y-10 ${globalPaddingY}`>
           <Carousel client:load />
           <CardTwo
             addons
@@ -25,8 +27,8 @@ import protecting from '../../../../public/protecting.webp';
             family.`
           />
         </div>
-        <CardThree />
-        <div class="py-8 px-4 lg:px-8 gap-y-10">
+        <CardThree paddingY={globalPaddingY}/>
+        <div class=`px-4 lg:px-8 gap-y-10 ${globalPaddingY}`>
           <CardTwo
             header="Protecting people, one policy at a time."
             imageSrc={protecting}
@@ -34,7 +36,7 @@ import protecting from '../../../../public/protecting.webp';
             description=`IWe are committed to delivering the highest standards of pro-tection, tailored to meet the unique needs of each individual and family. Our dedicated team of professionals works tirelessly to offer comprehensive insurance solutions that not only safeguard your assets but also offer you the support and asistance you need in times of uncertainty.`
           />
         </div>
-        <CardFour />
+        <CardFour paddingY={globalPaddingY}/>
       </section>
 </main>
 
