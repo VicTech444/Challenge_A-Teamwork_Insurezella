@@ -1,9 +1,9 @@
 ---
-import CardTwo from "./CardTwo.astro";
-import PrincipalCardMobile from "./PrincipalCardMobile.astro";
-import PolicySlider from "./PolicySlider.astro";
-import TimelineCard from "./TimelineCard.astro";
-import ReviewsCard from "./ReviewsCard.astro";
+import PrincipalSection from "./PrincipalSection.astro";
+import SectionTwo from "./SectionTwo.astro";
+import SectionThree from "./SectionThree.astro";
+import SectionFour from "./SectionFour.astro";
+import SectionFive from "./SectionFive.astro";
 import { PlansCardList } from "../../../helpers/mobile/PlansCardListMobile.ts";
 
 let cardTwoHeader =
@@ -14,27 +14,29 @@ let cardTwoParagraph =
 let reviewsCardHeader = "text-center text-2xl font-bold mb-3";
 let reviewsCardHighlight = "text-[#4e78f4]";
 let reviewsCardParagraph = "text-[#5e5f5e] text-center max-w-[540px]";
+
+const globalPaddingY = 'px-4 min-[500px]:px-8'
 ---
 
 <main class="mobile-layout">
-  <PrincipalCardMobile />
-  <div class="px-4 min-[500px]:px-8">
-    <CardTwo
+  <PrincipalSection />
+  <div class=`${globalPaddingY}`>
+    <SectionTwo
       header=`<h2 class="${cardTwoHeader}">Navigating <span class="${cardTwoHighlight}">Health Insurance</span> Made Easy</h2>`
       paragraph=`<p class="${cardTwoParagraph}">We're here to make understanding health insurance a breeze! Our friendly guide breaks down the ins and outs of insurance, helping you make informed choices with a smile. Say goodbye to confusion and hello to clarity</p>`
     />
   </div>
-  <PolicySlider />
-  <div class="px-4 min-[500px]:px-8">
-    <CardTwo
+  <SectionThree />
+  <div class=`${globalPaddingY}`>
+    <SectionTwo
       header=`<h2 class="${cardTwoHeader}">Affordable plans to <span class="${cardTwoHighlight}">Custom fit You</span></h2>`
       paragraph=`<p class="${cardTwoParagraph}">Comprehensive guides, expert advice, and simple tips to save on healthcare costs without sacrificing quality. Trust insurezella to help you reduce your expenses confidently</p>`
       renderCards={PlansCardList}
     />
   </div>
-  <TimelineCard />
-  <div class="px-4 min-[500px]:px-8">
-    <ReviewsCard
+  <SectionFour />
+  <div class=`${globalPaddingY}`>
+    <SectionFive
       header=`<h1 class="${reviewsCardHeader}">Our clients <span class="${reviewsCardHighlight}">reviews</span></h1>`
       paragraph=`<p class="${reviewsCardParagraph}">Condimentum rutrum placerat egestas condimentum mi eros. Eleifend cras quirntum Feugiat elit placerat. Diam tempor malesuada.</p>`
     />
