@@ -10,7 +10,7 @@ export default function Carousel() {
   return (
     <div className="w-full">
       <Swiper
-        spaceBetween={50}
+        spaceBetween={20}
         slidesPerView={2}
         navigation={true}
         pagination={{ clickable: true }}
