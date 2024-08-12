@@ -14,13 +14,13 @@ export const ListItems = [
     },
     {
       imageSrc: Medicare,
-      header: "MedicareSupplement",
+      header: "Medicare Supplement",
       description:
         "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy",
     },
     {
       imageSrc: LifeInsurance,
-      header: "LifeInsurance",
+      header: "Life Insurance",
       description:
         "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy",
     },
