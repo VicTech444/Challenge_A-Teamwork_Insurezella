@@ -15,83 +15,87 @@ import Clock from "../../SVG/Clock.astro";
 import Address from "../../SVG/Address.astro";
 ---
 
-<div class="grid grid-cols-1 desktop-footer relative custom-grid mb-[1px]">
+<div class="min-[1150px]:flex min-[1150px]:items-center min-[1150px]:flex-col">
   <div
-    class="p-4 custom-border -mb-10 relative z-10 bg-white gap-y-4 mr-16 ml-16 min-[620px]:gap-x-16 gap-x-8 grid grid-cols-2 min-[1150px]:grid-cols-4"
+    class=`grid grid-cols-1 desktop-footer relative custom-grid mb-[1px] max-w-screen-2xl`
   >
-    <div class="flex flex-col gap-y-5 items-center">
-      <div class="flex items-center flex-col gap-y-2 max-w-[180px]">
-        <BrandLogo styles="h-20 w-20 rounded-lg" />
-        <span class="block text-center text-[#6d7f92] max-w-[180px]">
-          "Discover the Peace of Mind You Deserve with Insurezella *Your
-          Reliable insurance Umbrella"
-        </span>
+    <div
+      class="p-4 custom-border -mb-10 relative z-10 bg-white gap-y-4 lg:mx-16 min-[620px]:gap-x-16 gap-x-8 grid grid-cols-2 min-[1150px]:grid-cols-4"
+    >
+      <div class="flex flex-col gap-y-5 items-center">
+        <div class="flex items-center flex-col gap-y-2 max-w-[180px]">
+          <BrandLogo styles="h-20 w-20 rounded-lg" />
+          <span class="block text-center text-[#6d7f92] max-w-[180px]">
+            "Discover the Peace of Mind You Deserve with Insurezella *Your
+            Reliable insurance Umbrella"
+          </span>
+        </div>
+        <div class="max-w-[180px] flex gap-3 flex-wrap">
+          <Facebook />
+          <Twitter />
+          <Instagram />
+          <Linkedin />
+        </div>
       </div>
-      <div class="max-w-[180px] flex gap-3 flex-wrap">
-        <Facebook />
-        <Twitter />
-        <Instagram />
-        <Linkedin />
+      <div class="flex flex-col gap-y-4">
+        <h6 class="text-[#130a6f] text-2xl font-semibold">Services</h6>
+        <ul class="flex flex-col gap-y-2 text-base text-[#76899a]">
+          <li class="flex gap-x-2 items-center">
+            <Umbrella />
+            <span>Health Insurance</span>
+          </li>
+          <li class="flex gap-x-2 items-center">
+            <LifeInsurance />
+            <span>Life Insurance</span>
+          </li>
+          <li class="flex gap-x-2 items-center">
+            <MedicalSupplement /><span>Medicare Supplement</span>
+          </li>
+          <li class="flex gap-x-2 items-center">
+            <MedicareAdvantage /><span>Medicare Advantage</span>
+          </li>
+          <li class="flex gap-x-2 items-center">
+            <ACA /><span>(ACA)Obamacare</span>
+          </li>
+        </ul>
       </div>
-    </div>
-    <div class="flex flex-col gap-y-4">
-      <h6 class="text-[#130a6f] text-2xl font-semibold">Services</h6>
-      <ul class="flex flex-col gap-y-2 text-base text-[#76899a]">
-        <li class="flex gap-x-2 items-center">
-          <Umbrella />
-          <span>Health Insurance</span>
-        </li>
-        <li class="flex gap-x-2 items-center">
-          <LifeInsurance />
-          <span>Life Insurance</span>
-        </li>
-        <li class="flex gap-x-2 items-center">
-          <MedicalSupplement /><span>Medicare Supplement</span>
-        </li>
-        <li class="flex gap-x-2 items-center">
-          <MedicareAdvantage /><span>Medicare Advantage</span>
-        </li>
-        <li class="flex gap-x-2 items-center">
-          <ACA /><span>(ACA)Obamacare</span>
-        </li>
-      </ul>
-    </div>
-    <div class="flex flex-col gap-y-4 items-center">
-      <h6 class="text-[#130a6f] text-2xl font-semibold -ml-8">Company</h6>
-      <ul class="flex flex-col gap-y-2 text-base text-[#76899a]">
-        <li class="flex gap-x-2 items-center">About us</li>
-        <li class="flex gap-x-2 items-center">Careers</li>
-        <li class="flex gap-x-2 items-center">Industry News</li>
-        <li class="flex gap-x-2 items-center">Privacy Policy</li>
-        <li class="flex gap-x-2 items-center">Terms & Conditions</li>
-      </ul>
-    </div>
-    <div class="flex flex-col gap-y-4">
-      <h6 class="text-[#130a6f] text-2xl font-semibold">Get In Touch</h6>
-      <ul class="flex flex-col gap-y-2 text-base text-[#76899a]">
-        <li class="flex gap-x-2 items-center">
-          <EmailMessage styles="text-[#131373]" />
-          <span>Email: support@insuzerella.com</span>
-        </li>
-        <li class="flex gap-x-2 items-center">
-          <PhoneCall styles="text-[#131373]" />
-          <span>Tel: +18772270774</span>
-        </li>
-        <li class="flex gap-x-2 items-center">
-          <Clock styles="text-[#131373]" /><span
-            >Hours: Mon-Fri 9:00AM - 5:00PM</span
-          >
-        </li>
-        <li class="flex gap-x-2 items-center">
-          <Address /><span
-            >300 SE 2nd Street Suite 600 Ft. Lauderdale FL 33301</span
-          >
-        </li>
-      </ul>
+      <div class="flex flex-col gap-y-4 items-center">
+        <h6 class="text-[#130a6f] text-2xl font-semibold -ml-8">Company</h6>
+        <ul class="flex flex-col gap-y-2 text-base text-[#76899a]">
+          <li class="flex gap-x-2 items-center">About us</li>
+          <li class="flex gap-x-2 items-center">Careers</li>
+          <li class="flex gap-x-2 items-center">Industry News</li>
+          <li class="flex gap-x-2 items-center">Privacy Policy</li>
+          <li class="flex gap-x-2 items-center">Terms & Conditions</li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-y-4">
+        <h6 class="text-[#130a6f] text-2xl font-semibold">Get In Touch</h6>
+        <ul class="flex flex-col gap-y-2 text-base text-[#76899a]">
+          <li class="flex gap-x-2 items-center">
+            <EmailMessage styles="text-[#131373]" />
+            <span>Email: support@insuzerella.com</span>
+          </li>
+          <li class="flex gap-x-2 items-center">
+            <PhoneCall styles="text-[#131373]" />
+            <span>Tel: +18772270774</span>
+          </li>
+          <li class="flex gap-x-2 items-center">
+            <Clock styles="text-[#131373]" /><span
+              >Hours: Mon-Fri 9:00AM - 5:00PM</span
+            >
+          </li>
+          <li class="flex gap-x-2 items-center">
+            <Address /><span
+              >300 SE 2nd Street Suite 600 Ft. Lauderdale FL 33301</span
+            >
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <div class="relative h-20">
+  <div class="relative h-20 w-full">
     <div class="absolute inset-0 bg-[#2f76f9]"></div>
   </div>
 </div>
