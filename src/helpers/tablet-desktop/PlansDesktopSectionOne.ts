@@ -1,22 +1,22 @@
 export const PlansListDesktop = [
     {
-        href: '/health-insurance-icon.webp',
+        href: '/healthOne.png',
         title: "Health Insurance",
     },
     {
-        href: '/medicare-icon.webp',
+        href: '/medicareOne.png',
         title: "Medicare Supplement",
     },
     {
-        href: '/medicare-advantage-icon.webp',
+        href: '/medicareTwo.png',
         title: "Medicare Advantage",
     },
     {
-        href: '/life-insurance-icon.webp',
+        href: '/lifeOne.png',
         title: "Life Insurance",
     },
     {
-        href: '/obamacare-icon.webp',
+        href: '/acaOne.png',
         title: "ACA obamacare",
     },
 ]
