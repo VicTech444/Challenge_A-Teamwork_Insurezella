@@ -1,49 +1,47 @@
 ---
 import PrincipalSection from "./PrincipalSection.astro";
-import SectionTwoCarrousel from "./Carrousels/SectionTwoCarrousel.tsx";
 import SectionThree from "./SectionThree.astro";
 import SectionTwo from "./SectionTwo.astro";
 import SectionFour from "./SectionFour.astro";
 import commitedHelp from "../../../../public/committed-help.webp";
-import protecting from '../../../../public/protecting.webp';
+import protecting from "../../../../public/protecting.webp";
 
-const globalPaddingY = 'py-12'
+const globalPaddingY = "py-12"; // 48px
+const maxWidth = "max-w-screen-2xl"; // 1536px
 ---
 
-<main class="tablet-desktop-layout ">
-    <PrincipalSection />
-    <section class="flex flex-col">
-        <div class=`px-4 lg:px-8 gap-y-10 ${globalPaddingY}`>
-          <SectionTwoCarrousel client:load />
-          <SectionTwo
-            addons
-            header="Committed to help you find the right plan"
-            imageSrc={commitedHelp}
-            btnText="ABOUT INSUREZELLA"
-            description=`Insurance is an important financial tool that can help you protect
+<main class="tablet-desktop-layout">
+  <PrincipalSection maxWidth={maxWidth} />
+  <section class="flex flex-col">
+    <SectionTwo
+      addons
+      header="Committed to help you find the right plan"
+      imageSrc={commitedHelp}
+      btnText="ABOUT INSUREZELLA"
+      description=`Insurance is an important financial tool that can help you protect
             yourself and your loved ones from financial losses in the event of an
             unexpected event. It is important to consider your individual needs and
             circumstances when choosing the right insurance coverage for you and your
             family.`
-          />
-        </div>
-        <SectionThree paddingY={globalPaddingY}/>
-        <div class=`px-4 lg:px-8 gap-y-10 ${globalPaddingY}`>
-          <SectionTwo
-            header="Protecting people, one policy at a time."
-            imageSrc={protecting}
-            btnText="LEARN MORE"
-            description=`IWe are committed to delivering the highest standards of pro-tection, tailored to meet the unique needs of each individual and family. Our dedicated team of professionals works tirelessly to offer comprehensive insurance solutions that not only safeguard your assets but also offer you the support and asistance you need in times of uncertainty.`
-          />
-        </div>
-        <SectionFour paddingY={globalPaddingY}/>
-      </section>
+      paddingY={globalPaddingY}
+      showCarrousel
+    />
+    <SectionThree paddingY={globalPaddingY} />
+    <SectionTwo
+      header="Protecting people, one policy at a time."
+      imageSrc={protecting}
+      btnText="LEARN MORE"
+      description=`IWe are committed to delivering the highest standards of pro-tection, tailored to meet the unique needs of each individual and family. Our dedicated team of professionals works tirelessly to offer comprehensive insurance solutions that not only safeguard your assets but also offer you the support and asistance you need in times of uncertainty.`
+      paddingY={globalPaddingY}
+    />
+    <SectionFour paddingY={globalPaddingY} maxWidth={maxWidth} />
+  </section>
 </main>
 
 <style>
-    @media (max-width: 829px) {
-        .tablet-desktop-layout {
-            display: none
-        }
+  @media (max-width: 829px) {
+    .tablet-desktop-layout {
+      display: none;
     }
+  }
 </style>
