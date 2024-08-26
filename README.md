@@ -41,7 +41,7 @@ Asegúrate de tener instalado **Node.js** (v14 o superior) y **npm** (v6 o super
 
 2. Navega al directorio del proyecto:
     ```bash
-    cd insurezella
+    cd Challenge_A-Teamwork_Insurezella
     ```
 
 3. Instala las dependencias necesarias:
