@@ -1,12 +1,21 @@
 ---
-import CardFourCarrousel from "./Carrousels/SectionFourCarrousel.tsx"
+import CardFourCarrousel from "./Carrousels/SectionFourCarrousel.tsx";
 
-let {paddingY} = Astro.props;
+interface Props {
+  paddingY: string;
+  maxWidth: string;
+}
+
+let { paddingY, maxWidth } = Astro.props;
 ---
 
-<section class=`flex justify-center flex-col gap-y-12 min-[850px]:-mt-[5%] min-[900px]:-mt-[10%] min-[970px]:-mt-[12%] lg:-mt-0 ${paddingY}`>
-    <h2 class="text-3xl font-bold text-center">We're here to help</h2>
-    <div class="">
-        <CardFourCarrousel client:load/>
+<section class=`${paddingY} lg:flex lg:justify-center `>
+  <section class=`px-4 lg:px-8 gap-y-10 ${maxWidth}`>
+    <div
+      class=`flex justify-center flex-col gap-y-12 min-[850px]:-mt-[5%] min-[900px]:-mt-[10%] min-[970px]:-mt-[12%] lg:-mt-0 ${paddingY}`
+    >
+      <h2 class="text-3xl font-bold text-center">We're here to help</h2>
+      <CardFourCarrousel client:load />
     </div>
+  </section>
 </section>
