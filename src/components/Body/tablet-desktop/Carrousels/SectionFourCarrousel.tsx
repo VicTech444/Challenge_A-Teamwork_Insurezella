@@ -8,10 +8,8 @@ import CarrouselItem from "./SectionFourCarrouselItem";
 import { ItemList } from "../../../../helpers/tablet-desktop/ItemListSectionFour";
 
 export default function CardFourCarrousel() {
-
- 
   return (
-    <>
+    <div>
       <section className="w-full lg:hidden">
         <Swiper
           spaceBetween={0}
@@ -40,6 +38,6 @@ export default function CardFourCarrousel() {
           <CarrouselItem {...slide} index={index} />
         ))}
       </section>
-    </>
+    </div>
   );
 }
