@@ -8,27 +8,30 @@ import { PlansListDesktop } from "../../../../helpers/tablet-desktop/PlansDeskto
 
 export default function SectionTwoCarrousel() {
   return (
-    <section className="w-full">
+    <div className={`w-full max-w-[1355px]`}>
       <Swiper
         spaceBetween={20}
         slidesPerView={2}
         navigation={true}
-        pagination={{ clickable: true }}
+        pagination={{ clickable: true, }}
         modules={[Navigation, Pagination]}
         breakpoints={{
           1024: {
             slidesPerView: 3,
           },
-          1128: {
-            slidesPerView: 5,
+          1120: {
+            slidesPerView: 4,
           },
+          1281: {
+            slidesPerView: 5
+          }
         }}
       >
         {PlansListDesktop.map((slide, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="" zoom>
             <div className="flex justify-center mb-5">
               <div className="flex flex-col rounded-md bg-white py-6">
-                <div className="flex flex-col items-center gap-y-2 px-9 py-10" style={{boxShadow: "0 6px 15px 2px #bdcdfc"}}>
+                <div className="flex flex-col items-center gap-y-2 px-16 py-10" style={{boxShadow: "4px 8px 10px 4px #bdcdfc"}}>
                   <img
                     src={slide.href}
                     alt="Logo of the image"
@@ -46,6 +49,6 @@ export default function SectionTwoCarrousel() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </section>
+    </div>
   );
 }
