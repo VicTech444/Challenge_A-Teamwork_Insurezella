@@ -28,9 +28,9 @@ export default function CarrouselItem(itemInfo: Props) {
             {description}
           </p>
 
-          <div className="my-auto flex items-end justify-self-end">
-            <p className="flex items-center gap-x-3 font-bold text-[#4e78f4]">
-              {actionCall}{" "}
+          <div className="flex items-end justify-self-end h-full">
+            <p className="flex gap-x-3 font-bold text-[#4e78f4]">
+              <span className="block">{actionCall}</span>{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
