@@ -8,7 +8,7 @@ import { PlansListDesktop } from "../../../../helpers/tablet-desktop/PlansDeskto
 
 export default function SectionTwoCarrousel() {
   return (
-    <div className={`w-full max-w-[1355px]`}>
+    <div className={`w-full max-w-[700px] lg:max-w-[1350px]`}>
       <Swiper
         spaceBetween={20}
         slidesPerView={2}
